@@ -5,7 +5,8 @@ vector<string> lumo::tokenize(string source) {
     size_t characterIndex = 0;
 
     while (characterIndex < source.size()) {
-        tokens.emplace_back(source[characterIndex]);
+        tokens.emplace_back(1, source[characterIndex]);
+        characterIndex++;
     }
 
     return tokens;
